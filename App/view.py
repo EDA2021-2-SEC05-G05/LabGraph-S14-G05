@@ -67,8 +67,9 @@ def printMenu():
     print("*******************************************")
 
 
-def optionTwo(cont):
+def optionTwo(cont, servicefile):
     print("\nCargando información de transporte de singapur ....")
+
     controller.loadServices(cont, servicefile)
     numedges = controller.totalConnections(cont)
     numvertex = controller.totalStops(cont)
@@ -158,3 +159,4 @@ if __name__ == "__main__":
     sys.setrecursionlimit(2 ** 20)
     thread = threading.Thread(target=thread_cycle)
     thread.start()
+ 

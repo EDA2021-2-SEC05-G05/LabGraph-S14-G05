@@ -68,6 +68,7 @@ def loadServices(analyzer, servicesfile):
     servicesfile = cf.data_dir + servicesfile
     input_file = csv.DictReader(open(servicesfile, encoding="utf-8"),
                                 delimiter=",")
+
     lastservice = None
     for service in input_file:
         if lastservice is not None:
